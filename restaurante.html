@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> La Bella Italia | Menú Digital</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     
+    <div class="restaurant-header">
+       <a href="index.html"class="btn-back">← Volver al Portfolio"</a>
+       <h1>🍕 Restaurante La Bella Italia</h1>
+       <p>Sabor auténtico italiano en el corazón de la ciudad</p>
+    </div>
+
+    <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filtrarMenu('todos')">Todos</button>
+        <button class="filter-btn "onclickonclick="filtrarMenu('pizzas')">Pizzas</button>
+        <button class="filter-btn" onclick="filtrarMenu('pastas')">Pastas</button> 
+        <button class="filter-btn" onclick="filtrarMenu('postres')">Postres</button>
+     </div>
+
+     <div class="menu-container">
+        <div class="dich-cord pizzas">
+            <span class="badge">🔥 Más Vendido</span>
+            <h3>🍕 Pizza Margherita</h3>
+            <p>Tomate natural, queso mozzarella de búfala y albahaca fresca.</p>
+            <div class="dish-footer">
+                <span class="price">10.50 €</span>
+                <button class="bnt-add" onclick="agregarALPedido('Pizza Margherita', 10.50)">Pedir +</button>
+             </div>
+        </div>
+
+        <div classs="dish-card pastas">
+            <span  class="badge recomendable">⭐ Recomendado</span>
+            <h3>🍝 Pasta Carbonara Tradicional</h3>
+            <p>Guanciale crujiente, yema de huevo, queso pecorino y pimienta.</p>
+            <div class="dish-footer">
+                <span class="price">12.00 €</span>
+                <button class="bnt-add" onclick="agregarALPedido('Pasta Carbonara', 12.00)">Pedir +</button>
+           </div>
+       </div>
+
+       <div class="dish-card pizzas">
+           <h3>🍕 Pizza Cuatro Quesos</h3>
+           <p>Mozzarella, gorgonzola, parmesano y queso de cabra.</p>
+           <div class="dish-footer">
+                <span class="price">11.90 €</span>
+                <button class="btn-add" onclick="agregarAlPedido('Pizza 4 Quesos', 11.90)">Pedir +</button>
+            </div>
+        </div>
+
+        <div class="dish-card postres">
+             <span class="badge">🍰 Casero</span>
+             <h3>🍰 Tiramisú Italiano</h3>
+             <p>Bizcochos de soletilla, café espresso y crema mascarpone.</p>
+             <div class="dish-footer">
+                <span class="price">5.50 €</span>
+                <button class ="bnt-add" onclick="agregarAlPedido('Tiramisú', 5.50)">Pedir +</button>
+            </div>  
+        </div>
+
+    </div>
+    
+    <div class="order-summary" id="resumen-pedido"> 
+        <p>🛒 <strong>Tu Pedido:</strong> <span id="texto-pedido">No has añadido nada todavía.</span></p> 
+        <p class="total-price">Total: <span id="precio-total">0.00</span> €</p>
+        <button class="btn-whatsapp" onclick="enviarPedidoWhatsApp()">Enviar Pedido por WhatsApp 💬</button>
+     </div>
+
+     <script src="Script.js"></script>
+
+</body>
+</html>
